@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Address Book</title>
+    <style>
+        input[type=text], input[type=tel], input[type=email], input[type=address], textarea,  select[name=relationship], input[type=date] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 5px;
+            margin-bottom: 22px;
+            display: inline-block;
+            font-size: 15px;
+            box-sizing: border-box; 
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            height: 100%; 
+            resize: vertical; 
+        }
+        
+        input[type=text]:focus:valid, input[type=tel]:focus:valid, input[type=email]:focus:valid, textarea:focus:valid{
+            background-color: #e6ffe6;
+            border-color: green;
+        }
+
+        input[type=text]:focus:invalid, input[type=tel]:focus:invalid, input[type=email]:focus:invalid, textarea:focus:invalid{
+            background-color: #ffe6e6;
+            border-color: red;
+        }
+
+        input[type=submit], input[type=reset] {
+            width: 49%;
+            padding: 15px;
+            margin-top: 5px;
+            margin-bottom: 22px;
+            display: inline-block;
+            font-size: 15px;
+            box-sizing: border-box;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover, input[type=reset]:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+    </style>
+</head>
+<body>
+    <h1>My Address Book</h1>
+    <h3>Add New Contact</h3>
+    <form method="get" action="address.html">
+    <label>
+        Name <br>
+        <input type="text" name="name" required>
+    </label>
+    <br><br>
+    <label>
+        Phone Number<br>
+        <input type="tel" name="tel" required>
+    </label>
+    <br><br>
+    <label>
+        Email Address<br>
+        <input type="email" name="email" required>
+    </label>
+    <br><br>
+    <label>
+         Home Address<br>
+        <input type="address" name="address">
+    </label>
+    <br><br>    
+    <label>
+        Gender<br>
+        <input type="radio" name="gender" value="Male" required>Male
+        <input type="radio" name="gender" value="Female" required>Female
+    </label>
+    <br><br>
+    <label>
+        Relationship<br>    
+        <select name="relationship" required>
+            <option value="">Please Select</option>
+            <option value="Family">Family</option>
+            <option value="Friend">Friend</option>
+            <option value="Work">Work</option>
+            <option value="Other">Other</option>
+        </select>
+    </label>
+    <br><br>
+    <label>
+        Date of Birth<br>
+        <input type="date" name="dob">  
+    </label>
+    <br><br>
+    <input type="submit" value="Submit" name="submit_btn">
+    <input type="reset" value="Reset">
+</body>
+</html>
+
